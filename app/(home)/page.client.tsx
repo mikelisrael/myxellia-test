@@ -8,7 +8,7 @@ const HomePageClient = () => {
     <main className="py-5">
       <div className="universal-x space-y-6">
         <header>
-          <h1 className="text-xl font-semibold">Welcome, Ahmed</h1>
+          <h1 className="text-xl font-semibold">Welcome, Michael</h1>
         </header>
         <MetricSection />
         <CarouselSection />

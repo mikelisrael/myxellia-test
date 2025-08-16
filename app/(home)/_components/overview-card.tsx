@@ -22,7 +22,7 @@ const OverviewCard: React.FC<OverviewCardProps> = ({
 }) => {
   return (
     <Card className={`h-full overflow-hidden pt-0`}>
-      <CardHeader className="bg-muted flex-center gap-2 border-b-2 py-2">
+      <CardHeader className="flex-center gap-2 border-b-2 bg-[#F9FAFB] py-2">
         <Icon />
         <CardTitle className="grow text-sm font-medium">{title}</CardTitle>
         <Button

@@ -52,7 +52,6 @@ const CarouselImage = ({
       };
     }
     return;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [autoPlay, autoPlayInterval, slides]);
 
   const handleMouseEnter = () => {
@@ -99,14 +98,19 @@ const CarouselImage = ({
           {images.map((src, index) => (
             <div
               key={index}
-              className="relative h-full flex-shrink-0"
+              className="relative h-full flex-shrink-0 overflow-hidden"
               style={{ width: `${slidePercent}%` }}
             >
-              <div className="relative h-full w-full">
+              <div
+                className={cn(
+                  "relative h-full w-full transition-transform duration-[5000ms]",
+                  currentIndex === index && "animate-zoomSoft"
+                )}
+              >
                 <ImageLoader
                   src={src}
                   alt={`Slide ${index + 1}`}
-                  className="h-full w-full"
+                  className="h-full w-full object-cover"
                 />
               </div>
             </div>
@@ -152,6 +156,19 @@ const CarouselImage = ({
           </div>
         )}
       </div>
+      <style jsx global>{`
+        @keyframes zoomSoft {
+          0% {
+            transform: scale(1);
+          }
+          100% {
+            transform: scale(1.1);
+          }
+        }
+        .animate-zoomSoft {
+          animation: zoomSoft 5s ease-in-out forwards;
+        }
+      `}</style>
     </div>
   );
 };
