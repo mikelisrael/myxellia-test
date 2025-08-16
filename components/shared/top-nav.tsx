@@ -19,7 +19,7 @@ import ResponsiveDialog from "./responsive-dialog";
 import { UserNav } from "./user-nav";
 
 const TopNav = () => {
-  const [openBudgetDialog, setOpenBudgetDialog] = useState(true);
+  const [openBudgetDialog, setOpenBudgetDialog] = useState(false);
 
   const navButtons = [
     {
@@ -50,7 +50,7 @@ const TopNav = () => {
 
   return (
     <nav className="sticky top-0 z-30">
-      <section className="navbar-height bg-[#191919]">
+      <section className="bg-[#191919] py-5">
         <div className="universal-x flex-between h-full gap-5">
           <Logo />
 
