@@ -7,6 +7,8 @@ import { IoImageOutline } from "react-icons/io5";
 
 type ImageLoaderProps = Omit<ImageProps, "width" | "height"> & {
   className?: string;
+  width?: number;
+  height?: number;
 };
 
 const ImageLoader = ({ className, ...props }: ImageLoaderProps) => {
@@ -16,13 +18,13 @@ const ImageLoader = ({ className, ...props }: ImageLoaderProps) => {
     <div className={cn("relative h-full w-full overflow-hidden", className)}>
       {!hasError ? (
         <>
-          <div className="absolute inset-0 animate-pulse bg-gray-400" />
+          {/* <div className="absolute inset-0 animate-pulse bg-gray-400" /> */}
           <Image
-            {...props}
             fill
             sizes="(max-width: 1024px) 100vw, 800px"
             className="h-full w-full object-cover transition-opacity"
             onError={() => setHasError(true)}
+            {...props}
             alt={props.alt ?? "carousel image"}
           />
         </>
