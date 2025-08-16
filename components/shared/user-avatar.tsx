@@ -5,16 +5,17 @@ type Props = {
   src?: string;
   alt?: string;
   className?: string;
+  fallbackClassName?: string;
 };
 
-const UserAvatar = ({ className, src, alt }: Props) => {
+const UserAvatar = ({ className, src, alt, fallbackClassName }: Props) => {
   const getFirstLetter = (name: string) => name.charAt(0).toUpperCase();
   const firstLetter = getFirstLetter(alt || "");
 
   return (
     <Avatar className={className}>
       <AvatarImage src={src} alt={alt} />
-      <AvatarFallback>
+      <AvatarFallback className={fallbackClassName}>
         {firstLetter ? (
           <span className="text-lg font-medium">{firstLetter}</span>
         ) : (
