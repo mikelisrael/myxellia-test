@@ -40,7 +40,7 @@ const salesMetrics = [
   {
     id: "total-outflow",
     value: "$200,000,000.00",
-    label: "Total Outflow",
+    label: "GMV",
     change: "2.5%",
     trend: "down" as const,
     color: "#F04438"
@@ -75,7 +75,7 @@ const MetricSection = () => {
   return (
     <section className="grid gap-4 lg:grid-cols-3">
       <Card className="lg:col-span-2">
-        <CardHeader className="flex-between">
+        <CardHeader className="flex-between flex-wrap gap-2">
           <div>
             <CardTitle className="mb-1 text-xl">Sales Overview</CardTitle>
             <CardDescription>
@@ -89,7 +89,7 @@ const MetricSection = () => {
         </CardHeader>
 
         <div className="!mb-0">
-          <div className="flex items-center justify-end px-6">
+          <div className="flex items-center px-6 md:justify-end">
             <Button variant="ghost" className="hover:bg-transparent">
               1 Week
             </Button>

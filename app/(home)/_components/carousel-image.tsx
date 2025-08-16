@@ -120,7 +120,7 @@ const CarouselImage = ({
         <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-t from-black/60 to-transparent" />
 
         {currentItem && (currentItem.title || currentItem.subtitle) && (
-          <div className="pointer-events-none absolute bottom-16 left-4 z-30">
+          <div className="pointer-events-none absolute bottom-16 left-4 z-20">
             <div>
               {currentItem.title && (
                 <h3 className="text-sm leading-tight font-medium text-white transition-opacity duration-300">

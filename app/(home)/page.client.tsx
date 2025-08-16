@@ -14,7 +14,7 @@ const HomePageClient = () => {
         <MetricSection />
         <CarouselSection />
 
-        <button className="flex-center fixed right-10 bottom-20 cursor-pointer rounded-full border bg-[#242526] p-4 transition-transform duration-300 hover:-translate-y-1">
+        <button className="flex-center fixed right-10 bottom-20 z-[30] cursor-pointer rounded-full border bg-[#242526] p-4 transition-transform duration-300 hover:-translate-y-1">
           <Messages />
         </button>
       </div>

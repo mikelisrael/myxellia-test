@@ -58,19 +58,23 @@ const Navigation = () => {
   };
 
   return (
-    <section className="bg-background z-[100] border-2 py-4">
-      <div className="universal-x flex-between gap-10">
-        <IndicatorPillLinks
-          items={navItems}
-          activePath={pathname}
-          onItemClick={handleNavClick}
-        />
+    <section className="bg-background z-[100] border-2 py-2 md:py-4">
+      <div className="universal-x flex-between flex flex-col gap-4 lg:flex-row lg:gap-10">
+        <div className="w-full grow overflow-x-auto lg:w-auto">
+          <IndicatorPillLinks
+            items={navItems}
+            activePath={pathname}
+            onItemClick={handleNavClick}
+          />
+        </div>
 
-        <PlaceholdersAndVanishInput
-          query={searchQuery}
-          setQuery={setSearchQuery}
-          placeholders={placeholders}
-        />
+        <div className="hidden justify-end lg:flex lg:max-w-md lg:min-w-0 lg:flex-1">
+          <PlaceholdersAndVanishInput
+            query={searchQuery}
+            setQuery={setSearchQuery}
+            placeholders={placeholders}
+          />
+        </div>
       </div>
     </section>
   );
