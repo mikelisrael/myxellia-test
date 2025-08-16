@@ -65,4 +65,4 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to see the a
 
 ## Contact
 
-Michael Israel - israelipinkz@gmail.com - ![Portfolio](https://mikelisrael.vercel.app)
+Michael Israel - israelipinkz@gmail.com - [Portfolio](https://mikelisrael.vercel.app)
