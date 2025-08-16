@@ -15,7 +15,7 @@ import OverviewCard from "./overview-card";
 const salesMetrics = [
   {
     id: "total-inflow",
-    value: "$200,000,000.00",
+    value: "$120,000,000.00",
     label: "Total Inflow",
     change: "2.5%",
     trend: "up" as const,
@@ -23,7 +23,7 @@ const salesMetrics = [
   },
   {
     id: "mrr",
-    value: "$200,000,000.00",
+    value: "$50,000,000.00",
     label: "MRR",
     change: "2.5%",
     trend: "up" as const,
@@ -39,7 +39,7 @@ const salesMetrics = [
   },
   {
     id: "total-outflow",
-    value: "$200,000,000.00",
+    value: "100,000,000.00",
     label: "GMV",
     change: "2.5%",
     trend: "down" as const,
