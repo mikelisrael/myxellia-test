@@ -1,5 +1,6 @@
 "use client";
 
+import SplitText from "@/components/shared/split-text";
 import Messages from "@/public/svg/messages-3.svg";
 import CarouselSection from "./_components/carousel-section";
 import MetricSection from "./_components/metric-section";
@@ -9,7 +10,10 @@ const HomePageClient = () => {
     <main className="bg-muted py-5">
       <div className="universal-x space-y-6">
         <header>
-          <h1 className="text-xl font-semibold">Welcome, Michael</h1>
+          <SplitText
+            text="Welcome, Michael"
+            className="text-xl font-semibold"
+          />
         </header>
         <MetricSection />
         <CarouselSection />
