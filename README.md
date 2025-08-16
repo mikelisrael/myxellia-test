@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Myxellia: Modern Financial Management Platform
 
-## Getting Started
+Myxellia is a feature-rich, full-stack financial management application built with Next.js, TypeScript, and Tailwind CSS. This project showcases a modern, responsive, and user-friendly interface for managing personal finances. It is a portfolio project designed to demonstrate proficiency in front-end development, UI/UX design, and modern web technologies.
 
-First, run the development server:
+## Live Demo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+[Link to your live demo here](https://your-demo-link.com)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+*   **Dashboard Overview:** A comprehensive overview of your financial health, including key metrics and charts.
+*   **Interactive Charts:** Visualize your income and expenses with interactive bar and area charts.
+*   **Budgeting Tools:** Create and manage budgets with an intuitive dialog-based interface.
+*   **Expense Tracking:** Easily track your expenses and categorize them for better financial insights.
+*   **Responsive Design:** A fully responsive layout that works seamlessly on desktop and mobile devices.
+*   **Modern UI/UX:** A clean and modern user interface built with Radix UI, Tailwind CSS, and Framer Motion for smooth animations.
+*   **Search Functionality:** Quickly search for transactions or other financial data.
+*   **User Authentication (placeholder):** A user navigation and avatar component, ready for a full authentication implementation.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Tech Stack & Rationale
 
-## Learn More
+| Technology | Description |
+| :--- | :--- |
+| **Next.js** | Chosen for its powerful features like server-side rendering, static site generation, and API routes, which are ideal for building a fast and scalable web application. |
+| **TypeScript** | Used to add static typing to JavaScript, improving code quality, maintainability, and developer experience. |
+| **Tailwind CSS** | A utility-first CSS framework that allows for rapid UI development and a highly customizable design system. |
+| **Radix UI** | Provides a set of unstyled, accessible components that serve as a foundation for building a high-quality and consistent design system. |
+| **Framer Motion** | A production-ready motion library for React that enables the creation of fluid and engaging animations. |
+| **Recharts** | A composable charting library that makes it easy to create beautiful and interactive charts. |
+| **Lucide React** | A comprehensive and well-designed icon library that enhances the user interface. |
+| **ESLint & Prettier** | Used for code linting and formatting to ensure code quality and consistency across the project. |
 
-To learn more about Next.js, take a look at the following resources:
+## Architectural Decisions
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+*   **Component-Based Architecture:** The application is built using a component-based architecture, which promotes reusability and maintainability. Components are organized into `shared` and `ui` directories, separating general-purpose components from application-specific ones.
+*   **Folder Structure:** The project follows a clean and organized folder structure, with clear separation of concerns between pages, components, hooks, and utility functions.
+*   **State Management:** For this project, we've relied on React's built-in state management capabilities (`useState`, `useContext`). For a larger application, a more robust state management library like Redux or Zustand would be considered.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Screenshots
 
-## Deploy on Vercel
+*(Add screenshots of your application here to showcase its features and UI)*
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Installation and Running
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/your_username/myxellia.git
+    cd myxellia
+    ```
+2.  **Install dependencies:**
+    ```bash
+    pnpm install
+    ```
+3.  **Run the development server:**
+    ```bash
+    pnpm dev
+    ```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
+
+## Future Improvements
+
+*   **Full User Authentication:** Implement a complete authentication system with a backend service to allow users to sign up, log in, and manage their accounts.
+*   **Database Integration:** Connect the application to a database (e.g., PostgreSQL, MongoDB) to persist user data.
+*   **API Integration:** Connect to a financial data API (e.g., Plaid) to allow users to link their bank accounts and automatically import transactions.
+*   **Testing:** Write unit and integration tests to ensure the application is robust and reliable.
+
+## Contact
+
+[Your Name] - [Your Email] - [Link to your portfolio]
