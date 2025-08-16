@@ -88,7 +88,7 @@ export function UserNav() {
             <span className="text-lg font-medium">Teams</span>
           </SinglePopoverItem>
           <SinglePopoverItem>
-            <RiContactsFill size={23} />
+            <RiContactsFill size={20} />
             <span className="text-lg font-medium">Contact Persons</span>
           </SinglePopoverItem>
           <SinglePopoverItem>
