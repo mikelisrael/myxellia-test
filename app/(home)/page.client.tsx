@@ -8,15 +8,18 @@ import MetricSection from "./_components/metric-section";
 const HomePageClient = () => {
   return (
     <main className="bg-muted py-5">
-      <div className="universal-x space-y-6">
-        <header>
+      <div className="universal-x">
+        <header className="mb-2">
           <SplitText
             text="Welcome, Michael"
             className="text-xl font-semibold"
           />
         </header>
-        <MetricSection />
-        <CarouselSection />
+
+        <div className="space-y-6">
+          <MetricSection />
+          <CarouselSection />
+        </div>
 
         <button className="flex-center fixed right-10 bottom-20 z-[30] cursor-pointer rounded-full border bg-[#242526] p-4 transition-transform duration-300 hover:-translate-y-1">
           <Messages />
