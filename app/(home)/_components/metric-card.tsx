@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { RiArrowLeftFill } from "react-icons/ri";
 
 interface MetricCardProps {
@@ -30,9 +31,12 @@ const MetricCard: React.FC<MetricCardProps> = ({
       <div className="flex items-center gap-2 text-[10px]">
         <span className="font-medium whitespace-nowrap">{label}</span>
         <div
-          className={`flex-center rotate-90 rounded-full ${bgColor} p-1 text-white`}
+          className={cn(
+            `flex-center rotate-90 rounded-full ${bgColor} p-1 text-white`,
+            trend === "down" && "-rotate-90"
+          )}
         >
-          <RiArrowLeftFill size={10} />
+          <RiArrowLeftFill size={10} strokeWidth={2} />
         </div>
         <span className={textColor}>{change}</span>
       </div>
