@@ -2,7 +2,7 @@
 
 ![Myxellia](app/opengraph-image.png)
 
-Myxellia is a feature-rich, full-stack financial management application built with Next.js, TypeScript, and Tailwind CSS. This project showcases a modern, responsive, and user-friendly interface for managing personal finances. It is a portfolio project designed to demonstrate proficiency in front-end development, UI/UX design, and modern web technologies.
+Myxellia is a feature-rich, financial management application built with Next.js, TypeScript, and Tailwind CSS. This project showcases a modern, responsive, and user-friendly interface for managing personal finances. It is a portfolio project designed to demonstrate proficiency in front-end development, UI/UX design, and modern web technologies.
 
 ## Live Demo
 
