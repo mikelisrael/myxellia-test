@@ -38,10 +38,6 @@ Myxellia is a feature-rich, full-stack financial management application built wi
 - **Folder Structure:** The project follows a clean and organized folder structure, with clear separation of concerns between pages, components, hooks, and utility functions.
 - **State Management:** For this project, we've relied on React's built-in state management capabilities (`useState`, `useContext`). For a larger application, a more robust state management library like Redux or Zustand would be considered.
 
-## Screenshots
-
-_(Add screenshots of your application here to showcase its features and UI)_
-
 ## Installation and Running
 
 1.  **Clone the repository:**
