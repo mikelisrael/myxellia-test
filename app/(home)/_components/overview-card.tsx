@@ -21,7 +21,7 @@ const OverviewCard: React.FC<OverviewCardProps> = ({
   onViewAll
 }) => {
   return (
-    <Card className={`h-full overflow-hidden pt-0`}>
+    <Card className={`flex w-full flex-col overflow-hidden pt-0 xl:h-full`}>
       <CardHeader className="flex-center gap-2 border-b-2 bg-[#F9FAFB] py-2">
         <Icon />
         <CardTitle className="grow text-sm font-medium">{title}</CardTitle>
@@ -35,10 +35,10 @@ const OverviewCard: React.FC<OverviewCardProps> = ({
         </Button>
       </CardHeader>
 
-      <CardContent className="grid grid-cols-3">
+      <CardContent className="grid h-full grow grid-cols-3 items-center">
         {stats.map((stat, index) => (
           <div key={index}>
-            <span className="text-sm text-[#525252]">{stat.label}</span>
+            <span className="text-sm text-[#3D3D3D]">{stat.label}</span>
             <span className="mt-2 block text-2xl font-semibold">
               {stat.value}
             </span>

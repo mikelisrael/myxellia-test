@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/card";
 import House from "@/public/svg/house.svg";
 import Profile2 from "@/public/svg/profile2.svg";
+import Charts from "./chart";
 import MetricCard from "./metric-card";
 import OverviewCard from "./overview-card";
 
@@ -102,7 +103,8 @@ const MetricSection = () => {
         </div>
 
         <CardContent className="grid gap-2 xl:grid-cols-2">
-          <div className="bg-gray-500"></div>
+          <Charts />
+
           <section className="grid gap-3 sm:grid-cols-2">
             {salesMetrics.map((metric) => (
               <MetricCard key={metric.id} {...metric} />
@@ -111,7 +113,7 @@ const MetricSection = () => {
         </CardContent>
       </Card>
 
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 md:flex-row lg:flex-col">
         {overviewCards.map((card) => (
           <OverviewCard
             key={card.id}
