@@ -47,7 +47,7 @@ const carouselData = [
 
 const CarouselSection = () => {
   return (
-    <section className="grid grid-cols-3 gap-4">
+    <section className="grid gap-4 lg:grid-cols-3">
       {carouselData.map((items, i) => (
         <CarouselImage key={i} items={items} />
       ))}

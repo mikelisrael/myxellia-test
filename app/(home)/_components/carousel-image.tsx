@@ -86,7 +86,7 @@ const CarouselImage = ({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="relative aspect-square w-full overflow-hidden rounded-xl">
+      <div className="relative aspect-[16/12] w-full overflow-hidden rounded-xl">
         <div
           className="flex h-full transition-transform duration-300 ease-in-out"
           style={{

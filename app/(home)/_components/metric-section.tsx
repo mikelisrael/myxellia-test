@@ -46,7 +46,6 @@ const salesMetrics = [
   }
 ];
 
-
 const overviewCards = [
   {
     id: "listings",
@@ -73,8 +72,8 @@ const overviewCards = [
 ];
 const MetricSection = () => {
   return (
-    <section className="grid grid-cols-3 gap-4">
-      <Card className="col-span-2">
+    <section className="grid gap-4 lg:grid-cols-3">
+      <Card className="lg:col-span-2">
         <CardHeader className="flex-between">
           <div>
             <CardTitle className="mb-1 text-xl">Sales Overview</CardTitle>
@@ -102,7 +101,7 @@ const MetricSection = () => {
           <hr className="mt-4" />
         </div>
 
-        <CardContent className="grid grid-cols-2 gap-2">
+        <CardContent className="grid gap-2 xl:grid-cols-2">
           <div className="bg-gray-500"></div>
           <section className="grid grid-cols-2 gap-3">
             {salesMetrics.map((metric) => (
