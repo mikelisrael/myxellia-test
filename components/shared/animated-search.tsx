@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { Search } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { MdCancel } from "react-icons/md";
 
 interface PlaceholdersAndVanishInputProps {
   query: string;
@@ -176,6 +177,11 @@ export function PlaceholdersAndVanishInput({
     onSubmit && onSubmit(e);
   };
 
+  const handleClear = () => {
+    setQuery("");
+    inputRef.current?.focus();
+  };
+
   return (
     <form
       className={cn(
@@ -190,7 +196,19 @@ export function PlaceholdersAndVanishInput({
         )}
         ref={canvasRef}
       />
+
       <Search className="ml-3" />
+
+      {query && !animating && (
+        <button
+          type="button"
+          onClick={handleClear}
+          className="hover:bg-muted-foreground/20 absolute right-3 z-10 flex h-4 w-4 items-center justify-center rounded-full transition-colors"
+        >
+          <MdCancel className="text-muted-foreground size-4" />
+        </button>
+      )}
+
       <input
         onChange={(e) => {
           if (!animating) {
@@ -202,8 +220,8 @@ export function PlaceholdersAndVanishInput({
         value={query}
         type="text"
         className={cn(
-          "relative block h-10 w-full border-0 pl-2 shadow-none focus:!outline-0",
-          animating && "text-transparent dark:text-transparent"
+          "t relative block h-10 w-full border-0 pr-8 pl-2 shadow-none focus:!outline-0",
+          animating && "ext-transparent dark:text-transparent"
         )}
       />
 
