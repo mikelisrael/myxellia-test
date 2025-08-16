@@ -55,6 +55,7 @@ const BudgetDialogContent = () => {
           fill={false}
           width={386}
           height={264}
+          showLoader={false}
         />
       </header>
 
