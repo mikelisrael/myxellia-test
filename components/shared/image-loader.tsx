@@ -9,16 +9,23 @@ type ImageLoaderProps = Omit<ImageProps, "width" | "height"> & {
   className?: string;
   width?: number;
   height?: number;
+  showLoader?: boolean;
 };
 
-const ImageLoader = ({ className, ...props }: ImageLoaderProps) => {
+const ImageLoader = ({
+  className,
+  showLoader = true,
+  ...props
+}: ImageLoaderProps) => {
   const [hasError, setHasError] = useState(false);
 
   return (
     <div className={cn("relative h-full w-full overflow-hidden", className)}>
       {!hasError ? (
         <>
-          {/* <div className="absolute inset-0 animate-pulse bg-gray-400" /> */}
+          {showLoader && (
+            <div className="absolute inset-0 animate-pulse bg-gray-400" />
+          )}
           <Image
             fill
             sizes="(max-width: 1024px) 100vw, 800px"
