@@ -13,6 +13,7 @@ import {
   TooltipTrigger
 } from "../ui/tooltip";
 import BudgetDialogContent from "./budget-dialog-content";
+import CalendarSheet from "./calendar-sheet";
 import Logo from "./logo";
 import Navigation from "./navigation";
 import ResponsiveDialog from "./responsive-dialog";
@@ -20,6 +21,7 @@ import { UserNav } from "./user-nav";
 
 const TopNav = () => {
   const [openBudgetDialog, setOpenBudgetDialog] = useState(false);
+  const [openCalendarSheet, setOpenCalendarSheet] = useState(false);
 
   const navButtons = [
     {
@@ -38,7 +40,7 @@ const TopNav = () => {
       id: "calendar",
       icon: Calendar,
       tooltip: "Calendar",
-      onClick: () => console.log("Calendar clicked")
+      onClick: () => setOpenCalendarSheet(true)
     },
     {
       id: "messages",
@@ -89,6 +91,8 @@ const TopNav = () => {
         onOpenChange={setOpenBudgetDialog}
         content={<BudgetDialogContent />}
       />
+
+      <CalendarSheet open={openCalendarSheet} setOpen={setOpenCalendarSheet} />
     </nav>
   );
 };
