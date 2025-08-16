@@ -1,7 +1,4 @@
-"use client";
-
-import CarouselSection from "./_components/carousel-section";
-import MetricSection from "./_components/metric-section";
+import CarouselImage from "@/app/(home)/_components/carousel-image";
 
 const carouselData = [
   [
@@ -48,19 +45,14 @@ const carouselData = [
   ]
 ];
 
-const HomePageClient = () => {
+const CarouselSection = () => {
   return (
-    <main className="py-5">
-      <div className="universal-x space-y-6">
-        <header>
-          <h1 className="text-xl font-semibold">Welcome, Ahmed</h1>
-        </header>
-
-        <MetricSection />
-        <CarouselSection />
-      </div>
-    </main>
+    <section className="grid grid-cols-3 gap-4">
+      {carouselData.map((items, i) => (
+        <CarouselImage key={i} items={items} />
+      ))}
+    </section>
   );
 };
 
-export default HomePageClient;
+export default CarouselSection;

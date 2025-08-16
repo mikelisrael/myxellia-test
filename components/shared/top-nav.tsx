@@ -43,7 +43,7 @@ const TopNav = () => {
   ];
 
   return (
-    <nav className="navbar-height bg-[#191919]">
+    <nav className="navbar-height sticky top-0 z-[999] bg-[#191919]">
       <div className="universal-x flex-between h-full gap-5">
         <Logo />
 

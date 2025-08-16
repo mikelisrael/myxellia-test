@@ -1,0 +1,38 @@
+"use client";
+
+import { cn } from "@/lib/utils";
+import Image, { ImageProps } from "next/image";
+import { useState } from "react";
+import { IoImageOutline } from "react-icons/io5";
+
+type ImageLoaderProps = Omit<ImageProps, "width" | "height"> & {
+  className?: string;
+};
+
+const ImageLoader = ({ className, ...props }: ImageLoaderProps) => {
+  const [hasError, setHasError] = useState(false);
+
+  return (
+    <div className={cn("relative h-full w-full overflow-hidden", className)}>
+      {!hasError ? (
+        <>
+          <div className="absolute inset-0 animate-pulse bg-gray-400" />
+          <Image
+            {...props}
+            fill
+            sizes="(max-width: 1024px) 100vw, 800px"
+            className="h-full w-full object-cover transition-opacity"
+            onError={() => setHasError(true)}
+            alt={props.alt ?? "carousel image"}
+          />
+        </>
+      ) : (
+        <div className="bg-muted flex h-full w-full items-center justify-center">
+          <IoImageOutline className="text-muted-foreground m-auto text-2xl" />
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default ImageLoader;

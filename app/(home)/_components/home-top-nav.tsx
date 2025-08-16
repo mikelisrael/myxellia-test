@@ -58,7 +58,7 @@ const HomeTopNav = () => {
   };
 
   return (
-    <nav className="bg-background border-2 py-4">
+    <nav className="bg-background z-[100] border-2 py-4">
       <div className="universal-x flex-between gap-10">
         <IndicatorPillLinks
           items={navItems}
