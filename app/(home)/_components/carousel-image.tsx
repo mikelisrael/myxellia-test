@@ -18,7 +18,7 @@ interface CarouselImageProps {
 }
 
 const CarouselImage = ({
-  items: itemsProp,
+  items = [],
   className,
   autoPlay = true,
   autoPlayInterval = 5000
@@ -27,22 +27,6 @@ const CarouselImage = ({
   const [isTransitioning, setIsTransitioning] = useState(false);
   const autoPlayRef = useRef<number | null>(null);
 
-  const defaultItems: Item[] = [
-    {
-      image:
-        "https://images.unsplash.com/photo-1517502884422-41eaead166d4?q=80&w=1025&auto=format&fit=crop&ixlib=rb-4.1.0",
-      title: "MOST CLICKED",
-      subtitle: "Urban Prime Plaza Premiere"
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0",
-      title: "TRENDING",
-      subtitle: "The Pinnacle of Luxury"
-    }
-  ];
-
-  const items = itemsProp && itemsProp.length > 0 ? itemsProp : defaultItems;
   const images = items.map((it) => it.image);
   const slides = images.length;
 
