@@ -31,7 +31,7 @@ const IndicatorPillLinks: React.FC<IndicatorPillLinksProps> = ({
   onItemClick,
   className = "",
   buttonVariant = "ghost",
-  activeClassName = "text-foreground",
+  activeClassName = "text-foreground font-semibold",
   inactiveClassName = "text-muted-foreground hover:text-foreground",
   indicatorClassName = "bg-accent"
 }) => {
