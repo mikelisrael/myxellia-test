@@ -1,8 +1,8 @@
 import CountUp from "@/components/shared/count-up";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { PiCaretLeftBold } from "react-icons/pi";
 import { useState } from "react";
+import { PiCaretLeftBold } from "react-icons/pi";
 
 interface StatItem {
   label: string;
