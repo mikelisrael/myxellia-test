@@ -99,7 +99,7 @@ const MetricSection = () => {
             <Button variant="secondary">1 Year</Button>
           </div>
 
-          <hr className="mt-4" />
+          <div className="mt-4 border-t-2" />
         </div>
 
         <CardContent className="grid gap-2 xl:grid-cols-2">
