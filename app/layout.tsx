@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${euclidCircularB.className} animate-in fade-in-0 overflow-clip antialiased duration-300`}
+        className={`${euclidCircularB.className} animate-in fade-in-0 overflow-clip overflow-y-auto antialiased duration-300`}
         suppressHydrationWarning
       >
         <TopNav />
