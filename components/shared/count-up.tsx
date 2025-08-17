@@ -38,6 +38,7 @@ export default function CountUp({
   });
 
   const isInView = useInView(ref, { once: true, margin: "0px" });
+  const shouldStart = startWhen ? isInView : true;
 
   const getDecimalPlaces = (num: number): number => {
     const str = num.toString();
@@ -59,29 +60,27 @@ export default function CountUp({
   }, [from, to, direction]);
 
   useEffect(() => {
-    if (isInView && startWhen) {
-      if (typeof onStart === "function") {
-        onStart();
-      }
+    if (!shouldStart) return;
 
-      const timeoutId = setTimeout(() => {
-        motionValue.set(direction === "down" ? from : to);
-      }, delay * 1000);
+    if (typeof onStart === "function") onStart();
 
-      const durationTimeoutId = setTimeout(
-        () => {
-          if (typeof onEnd === "function") {
-            onEnd();
-          }
-        },
-        delay * 1000 + duration * 1000
-      );
+    const timeoutId = setTimeout(() => {
+      motionValue.set(direction === "down" ? from : to);
+    }, delay * 1000);
 
-      return () => {
-        clearTimeout(timeoutId);
-        clearTimeout(durationTimeoutId);
-      };
-    }
+    const durationTimeoutId = setTimeout(
+      () => {
+        if (typeof onEnd === "function") {
+          onEnd();
+        }
+      },
+      delay * 1000 + duration * 1000
+    );
+
+    return () => {
+      clearTimeout(timeoutId);
+      clearTimeout(durationTimeoutId);
+    };
   }, [
     isInView,
     startWhen,

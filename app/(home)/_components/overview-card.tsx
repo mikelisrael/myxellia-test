@@ -110,6 +110,7 @@ const OverviewCard: React.FC<OverviewCardProps> = ({
                       duration={0.1}
                       delay={index * 0.2}
                       onEnd={() => handleCountUpEnd(index)}
+                      startWhen={false}
                     />
                   </div>
                 )}
