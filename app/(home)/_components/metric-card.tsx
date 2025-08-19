@@ -23,7 +23,9 @@ const MetricCard: React.FC<MetricCardProps> = ({
   const textColor = isPositive ? "text-green-500" : "text-red-500";
 
   return (
-    <div className={`rounded-xl border-2 p-4 ${className}`}>
+    <div
+      className={`flex flex-col justify-center rounded-xl border-2 p-4 ${className}`}
+    >
       <h4 className="text-[19px] font-semibold" style={{ color }}>
         {value}
       </h4>
